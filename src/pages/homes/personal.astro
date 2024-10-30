@@ -1,0 +1,548 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Sobre Nosotros Arxatec',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'Resume', href: '#resume' },
+        { text: 'Porfolio', href: '#porfolio' },
+        { text: 'Blog', href: '#blog' },
+        { text: 'Github', href: 'https://github.com/onwidget' },
+      ]}
+      actions={[
+        {
+          text: 'Hire me',
+          href: '#',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Sarah Johnson"
+    tagline="Personal Web Demo"
+    
+  >
+  
+    <!-- <Fragment slot="subtitle">
+      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
+      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
+      realities.
+
+      actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
+    </Fragment> -->
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:brand-dribbble',
+        callToAction: {
+          target: '_blank',
+          text: 'Asesoría Laboral',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:brand-behance',
+        callToAction: {
+          target: '_blank',
+          text: 'Consultoría Empresarial',
+
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:brand-pinterest',
+        callToAction: {
+          target: '_blank',
+          text: 'Capacitación en Derecho Laboral',
+          href: '#',
+        },
+      },
+    ]}
+    image={{
+      src: 'https://scontent.fjau2-1.fna.fbcdn.net/v/t39.30808-6/271813385_1129584577581736_4627392267121470717_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF_kxB0l2Ui9YHf8N0KLRss2cyF5DpV5PfZzIXkOlXk9_JDij4izoBaSNNFZQisnOlv7BR5qLcqON_-7PBnxoU7&_nc_ohc=hZLqIjClQbwQ7kNvgEm_m0G&_nc_zt=23&_nc_ht=scontent.fjau2-1.fna&_nc_gid=AMD9UiMLVqsffG2HhHHkM-v&oh=00_AYD3rOZB7nHqEdYG8-ZYdhtQdOu20DNUkjEGZplNSKY96w&oe=67283618',
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+  <Fragment slot="content">
+    <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sobre Nosotros</h2>
+    <p>
+      Bienvenidos a Arxatec, donde nos especializamos en ofrecer soluciones en derecho laboral. Nuestra misión es
+      brindar apoyo confiable y profesional para proteger los intereses tanto de empresas como de sus empleados.
+    </p>
+    <br />
+    <p>
+      Nos motiva contribuir a un ambiente laboral más justo y eficiente. Ofrecemos consultoría experta, asesoría en
+      derecho laboral y capacitación integral para ayudar a nuestros clientes a tomar decisiones informadas y cumplir
+      con la normativa vigente.
+    </p>
+    <br />
+    <p>Para conocer más sobre nuestros servicios, puedes explorar:</p>
+  </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+  id="resume"
+  title="Experiencia Laboral"
+  items={[
+    {
+      title:
+        'Consultor de Derecho Laboral <br /> <span class="font-normal">Arxatec, Huancayo, Perú</span> <br /> <span class="text-sm font-normal">2022 - Presente</span>',
+      description: `Asesorar a empresas en el cumplimiento de las normativas laborales peruanas. <br /> Desarrollar políticas internas de recursos humanos para promover un entorno laboral saludable. <br /> Capacitar al personal sobre derechos laborales y mejores prácticas en el trabajo. <br /> Colaborar con equipos legales para resolver conflictos laborales de manera efectiva.`,
+      icon: 'tabler:briefcase',
+    },
+    {
+      title:
+        'Asistente Legal en Derecho Laboral <br /> <span class="font-normal">Consultores Laborales Huancayo, Perú</span> <br /> <span class="text-sm font-normal">2020 - 2022</span>',
+      description: `Apoyar en la elaboración de informes legales relacionados con el ámbito laboral. <br /> Investigar y analizar cambios en la legislación laboral peruana. <br /> Asistir en la preparación de documentos para disputas laborales. <br /> Coordinar sesiones de capacitación sobre derechos laborales para empleados y empleadores.`,
+      icon: 'tabler:briefcase',
+    },
+  ]}
+  classes={{ container: 'max-w-3xl' }}
+/>
+
+
+  <!-- Steps Widget ****************** -->
+<!-- 
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  /> -->
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+  title="Habilidades"
+  subtitle="Descubre las competencias que me permiten ofrecer soluciones efectivas en el ámbito del derecho laboral."
+  columns={3}
+  defaultIcon="tabler:point-filled"
+  items={[
+    {
+      title: 'Asesoría Legal',
+      description: 'Experto en proporcionar asesoría legal en temas laborales y cumplimiento normativo.',
+    },
+    {
+      title: 'Redacción de Documentos',
+      description: 'Hábil en la elaboración de contratos, políticas internas y documentos legales necesarios.',
+    },
+    {
+      title: 'Resolución de Conflictos',
+      description: 'Capacitado en mediación y resolución efectiva de conflictos laborales.',
+    },
+    {
+      title: 'Conocimiento de Normativa Laboral',
+      description: 'Amplio conocimiento de la legislación laboral peruana y sus implicancias.',
+    },
+    {
+      title: 'Capacitación y Formación',
+      description: 'Experiencia en diseñar y ejecutar capacitaciones sobre derechos laborales y mejores prácticas.',
+    },
+    {
+      title: 'Gestión de Recursos Humanos',
+      description: 'Habilidades en la gestión de recursos humanos, promoviendo un ambiente laboral saludable.',
+    },
+    {
+      title: 'Investigación Jurídica',
+      description: 'Competente en la investigación de leyes y jurisprudencias relevantes al derecho laboral.',
+    },
+    {
+      title: 'Comunicación Efectiva',
+      description: 'Diligente en mantener una comunicación clara y efectiva con clientes y colaboradores.',
+    },
+    {
+      title: 'Adaptabilidad',
+      description: 'Rápido en adaptarse a cambios en las regulaciones laborales y necesidades de los clientes.',
+    },
+  ]}
+/>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="porfolio"
+    title="Funcionalidades"
+    subtitle="Descubre cómo Arxatec revoluciona la gestión de consultas legales con tecnología avanzada y una interfaz amigable. Nuestro sistema simplifica procesos complejos para abogados y clientes, brindando soluciones rápidas y confiables."
+    isReversed
+    items={[
+       {
+        title: ' Consultas legales en línea 24/7: ',
+        description:
+          'Disponibilidad continua de abogados para resolver dudas laborales a través de chat o videollamada.',
+      },
+      {
+        title: ' Respuestas rápidas automáticas: ',
+        description:
+          ' Chatbots que brindan respuestas inmediatas a preguntas frecuentes sobre derechos laborales.  ',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8TGVnYWx8ZW58MHx8MHx8fDA%3D',
+      alt: 'Tech Design Image',
+    }}
+   
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        1. Asesoria Legal Online<br /><span class="text-2xl"></span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Formulario automatizado para reclamos laborales:',
+        description:
+          'Generación de documentos de forma sencilla para presentar reclamos ante las autoridades competentes.',
+      },
+      {
+        title: 'Seguimiento de casos en tiempo real 24/7:',
+        description: `Monitoreo continuo del estado de los trámites o demandas.  `,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fExlZ2FsfGVufDB8fDB8fHww',
+      alt: 'Art and Music Poster Image',
+    }}
+
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        2. Tramitación y Gestión de Reclamos: <br /><span class="text-2xl"></span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Acceso a legislación laboral: ',
+        description:
+          'Base de datos siempre disponible con leyes, reglamentos, normas y jurisprudencias laborales actualizadas. ',
+      },
+      {
+        title: 'Guías y tutoriales sobre derechos laborales:',
+        description: ` Material educativo accesible en cualquier momento para que conozcas tus derechos.  `,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1473186505569-9c61870c11f9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fExlZ2FsfGVufDB8fDB8fHww',
+      alt: 'Art and Music Poster Image',
+    }}
+
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        3. Biblioteca Legal y Recursos Educativos: <br /><span class="text-2xl"></span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Calculadora de liquidación de beneficios sociales:',
+        description:
+          '  Herramientas para calcular indemnizaciones, vacaciones, CTS y otros beneficios.',
+      },
+      {
+        title: ' Calculadora de horas extras y remuneraciones:',
+        description: ` Determina el pago adecuado de horas adicionales, con acceso continuo.   `,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1423592707957-3b212afa6733?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fExlZ2FsfGVufDB8fDB8fHww',
+      alt: 'Art and Music Poster Image',
+    }}
+
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        4. Calculadoras Legales:  <br /><span class="text-2xl"></span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: ' Modelos de cartas y solicitudes 24/7: ',
+        description:
+          ' Generación automática de documentos como cartas de reclamo o solicitudes de inspección.',
+      },
+      {
+        title: ' Plantillas personalizables para contratos y acuerdos:',
+        description: `  Adaptación de modelos según tus necesidades específicas.   `,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fExlZ2FsfGVufDB8fDB8fHww',
+      alt: 'Art and Music Poster Image',
+    }}
+
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        5. Generador de Documentos Legales: <br /><span class="text-2xl"></span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+  isReversed
+  isAfterContent={true}
+  items={[
+    {
+      title: ' Webinars y cursos sobre derechos laborales:',
+      description:
+        '  Clases en línea impartidas por abogados especializados, con acceso continuo. C',
+    },
+    {
+      title: 'Certificación en temas de seguridad y salud laboral: ',
+      description: ` Formación siempre disponible para temas de seguridad en el trabajo.`,
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1436450412740-6b988f486c6b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fExlZ2FsfGVufDB8fDB8fHww',
+    alt: 'Art and Music Poster Image',
+  }}
+
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      6. Capacitación y Talleres Online: <br /><span class="text-2xl"></span>
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+<Content
+isReversed
+isAfterContent={true}
+items={[
+  {
+    title: ' Asistencia para representación ante inspecciones de trabajo:',
+    description:
+      '  Apoyo continuo durante inspecciones o audiencias laborales.',
+  },
+  {
+    title: ' Defensa en casos de despido arbitrario o acoso laboral:  ',
+    description: `Servicios de defensa legal especializada accesibles en cualquier momento.   `,
+  },
+]}
+image={{
+  src: 'https://plus.unsplash.com/premium_photo-1695449439526-9cebdbfa1a2c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8TGVnYWx8ZW58MHx8MHx8fDA%3D',
+  alt: 'Art and Music Poster Image',
+}}
+
+>
+<Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+    7. Representación Legal:<br /><span class="text-2xl"></span>
+  </h3>
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Content>
+
+<Content
+isReversed
+isAfterContent={true}
+items={[
+  {
+    title: ' Recordatorios de fechas importantes 24/7:  ',
+    description:
+      'Alertas sobre plazos legales o trámites importantes.',
+  },
+  {
+    title: ' Actualización de cambios en la legislación laboral:',
+    description: ` Notificaciones en tiempo real sobre nuevas leyes o regulaciones. `,
+  },
+]}
+image={{
+  src: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TGVnYWx8ZW58MHx8MHx8fDA%3D',
+  alt: 'Art and Music Poster Image',
+}}
+
+>
+<Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+    8. Notificaciones y Alertas:<br /><span class="text-2xl"></span>
+  </h3>
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Content>
+
+<Content
+isReversed
+isAfterContent={true}
+items={[
+  {
+    title: 'Asistencia inmediata para emergencias laborales: ',
+    description:
+      ' Orientación legal inicial para casos urgentes como despidos repentinos, acoso laboral o accidentes de trabajo.',
+  },
+  {
+    title: ' Guía paso a paso para las primeras acciones legales:',
+    description: `  Instrucciones claras para actuar en situaciones críticas, asegurando que  tomes las decisiones correctas desde el inicio.  
+  `,
+  },
+]}
+image={{
+  src: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TGVnYWx8ZW58MHx8MHx8fDA%3D',
+  alt: 'Art and Music Poster Image',
+}}
+
+>
+<Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+    9. Primeros Auxilios Legales: <br /><span class="text-2xl"></span>
+  </h3>
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Content>
+
+<Content
+isReversed
+isAfterContent={true}
+items={[
+  {
+    title: ' Acceso gratuito a funciones básicas por 30 días:',
+    description:
+      '  Accede  sin costo a servicios básicos como consultas limitadas, calculadoras legales y biblioteca de recursos. ',
+  },
+  {
+    title: 'Funciones premium disponibles mediante suscripción:',
+    description: `  Servicios avanzados como asesoría legal personalizada, generación de documentos y defensa legal estarán disponibles tras el período de prueba gratuito.`,
+  },
+]}
+image={{
+  src: 'https://plus.unsplash.com/premium_photo-1661497281000-b5ecb39a2114?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TGVnYWx8ZW58MHx8MHx8fDA%3D',
+  alt: 'Art and Music Poster Image',
+}}
+
+>
+<Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+    10. Modelo de Servicio Freemium: <br /><span class="text-2xl"></span>
+  </h3>
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Content>
+
+      
+
+  <!-- Content Widget **************** -->
+
+  
+  <!-- Testimonials Widget *********** -->
+
+
+
+  <!-- CallToAction Widget *********** -->
+
+  
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Explora nuestos Blogs"
+    
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>
