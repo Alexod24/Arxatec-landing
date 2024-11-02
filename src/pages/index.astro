@@ -13,8 +13,13 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
 
 import Testimonials from '~/components/widgets/Testimonials.astro';
+import WhatsApp from '~/components/widgets/WhatsApp.astro';
+
+import ArxaTEC from '~/assets/images/ARXATEC.png';
+
 
 const appStoreImg = '~/assets/images/app-store.png';
 const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
@@ -35,6 +40,8 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
+  
+
   <Hero2
     tagline="Simplifica tus consultas legales con"
     actions={[
@@ -42,9 +49,9 @@ const metadata = {
       { text: 'Mas informacion', href: '#features' },
     ]}
     image={{
-      src: 'https://universidadeuropea.com/resources/media/images/abogado-digital-800x450.original.jpg',
+      src: ArxaTEC,
       alt: 'AstroWind Hero Image',
-      style: 'border-radius: 50%; width: 500px; height: 500px; object-fit: cover; filter: brightness(0.9);',
+      style: 'border-radius: 50%; width: 500px; height: 500px; object-fit: cover; filter: brightness(0.9); position: relative; top: -20px;',
     }}
 
   >
@@ -156,6 +163,7 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
+    id='soluciones'
     isReversed
     items={[
       {
@@ -164,12 +172,7 @@ const metadata = {
           'An intuitive and easy-to-navigate interface that allows users to quickly browse and find the templates they need.',
         icon: 'tabler:wand',
       },
-      {
-        title: 'Monitoreo y seguimiento de procesos judiciales laborales',
-        description:
-          'Include basic customization tools that let users modify text, colors, images, and other elements within the templates.',
-        icon: 'tabler:settings',
-      },
+      
       {
         title: 'Optimización de liquidaciones laborales',
         description:
@@ -241,6 +244,7 @@ const metadata = {
 
   <Steps
   title="Realiza tu consulta legal en línea de manera rápida y eficiente con Arxatec."
+  id='pasos'
   items={[
     {
       title: 'Paso 1: <span class="font-medium">Registro</span>',
@@ -284,6 +288,7 @@ const metadata = {
     title="Servicios legales laborales"
     subtitle="Arxatec ofrece una variedad de servicios especializados en el área laboral"
     tagline="Servicios"
+    id='servicios'
     items={[
       {
         title: 'Asesoría en despidos',
@@ -352,18 +357,52 @@ const metadata = {
 
 
   
-  <!-- Features2 Widget ************** -->
+  <!-- Precios ************** -->
+
+  <Pricing
+  title="Planes de precios flexibles"
+  id='precios'
+  prices={[
+    {
+      title: 'Freemium',
+      subtitle: 'Acceso a consultas básicas y revisión de contratos laborales',
+      price: '0',
+      period: '/ mes',
+      callToAction: {
+        target: '_blank',
+        text: 'Comienza Gratis',
+        href: 'https://web.whatsapp.com/send?phone=51970780460&text=Hola,%20estoy%20interesado%20en%20el%20plan%20Freemium%20de%20ArxaTEC',
+      },
+    },
+    {
+      title: 'Básico',
+      subtitle: 'Asesoría avanzada y gestión de conflictos laborales',
+      price: 20,
+      period: '/ mes',
+      callToAction: {
+        target: '_blank',
+        text: 'Mejorar a Profesional',
+        href: 'https://web.whatsapp.com/send?phone=51970780460&text=Hola,%20estoy%20interesado%20en%20el%20plan%20Freemium%20de%20ArxaTEC',
+      },
+      hasRibbon: true,
+      ribbonTitle: 'más popular',
+    },
+    {
+      title: 'Premium',
+      subtitle: 'Soluciones personalizadas con mas funcionalidades',
+      price: 40,
+      period: '/ mes',
+      callToAction: {
+        target: '_blank',
+        text: 'Funciones Corporativas',
+        href: 'https://web.whatsapp.com/send?phone=51970780460&text=Hola,%20estoy%20interesado%20en%20el%20plan%20Freemium%20de%20ArxaTEC',
+      },
+    },
+  ]}
+/>
 
 
-  <!-- HighlightedPosts Widget ******* -->
 
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
 
   <!-- FAQs Widget ******************* -->
 
@@ -372,6 +411,7 @@ const metadata = {
   subtitle="Resuelve tus dudas sobre cómo Arxatec puede ayudarte a resolver tus problemas legales laborales de manera eficiente y accesible."
   tagline="FAQs"
   classes={{ container: 'max-w-6xl' }}
+  id='faq'
   items={[
     {
       title: '¿Qué servicios ofrece la plataforma?',
@@ -415,6 +455,7 @@ const metadata = {
 
 <Testimonials
   title="Lo que dicen nuestros usuarios"
+  id='testimonios'
   testimonials={[
     {
       testimonial: `El caso lo tenía perdido, pero encontré aquí una opción para que mi proceso continúe, antes de una inicial o una cuenta que en otros estudios me pidieron, aquí me dieron las facilidades. Al día de hoy, el caso ya se ha resuelto`,
@@ -480,4 +521,8 @@ const metadata = {
   </div>
   
   </CallToAction>
+
+  
 </Layout>
+
+<WhatsApp>

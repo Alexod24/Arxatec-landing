@@ -1,5 +1,5 @@
 site:
-  name: ArxaTec
+  name: ArxaTEC
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false

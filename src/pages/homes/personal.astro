@@ -11,42 +11,28 @@ import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
+import ArxaTEC from '~/assets/images/ARXATEC.png';
+
 const metadata = {
   title: 'Sobre Nosotros Arxatec',
+  
 };
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
-  <Fragment slot="header">
-    <Header
-      links={[
-        { text: 'Home', href: '#' },
-        { text: 'About', href: '#about' },
-        { text: 'Resume', href: '#resume' },
-        { text: 'Porfolio', href: '#porfolio' },
-        { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/onwidget' },
-      ]}
-      actions={[
-        {
-          text: 'Hire me',
-          href: '#',
-        },
-      ]}
-      isSticky
-      showToggleTheme
-    />
-  </Fragment>
+  
+ 
 
   <!-- Hero2 Widget ******************* -->
 
-  <Hero
+  <!-- <Hero
     id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
+    title="Arxatec"
+    tagline="Sobre Nosotros"
+    
     
   >
+</Hero> -->
   
     <!-- <Fragment slot="subtitle">
       I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
@@ -55,13 +41,13 @@ const metadata = {
 
       actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
     </Fragment> -->
-  </Hero>
+ 
 
   <!-- Content Widget **************** -->
 
   <Content
     id="about"
-    columns={3}
+    columns={2}
     items={[
       {
         icon: 'tabler:brand-dribbble',
@@ -75,25 +61,20 @@ const metadata = {
         icon: 'tabler:brand-behance',
         callToAction: {
           target: '_blank',
-          text: 'Consultoría Empresarial',
+          text: 'Capacitacion Laboral',
 
           href: '#',
         },
       },
-      {
-        icon: 'tabler:brand-pinterest',
-        callToAction: {
-          target: '_blank',
-          text: 'Capacitación en Derecho Laboral',
-          href: '#',
-        },
-      },
+      
     ]}
     image={{
-      src: 'https://scontent.fjau2-1.fna.fbcdn.net/v/t39.30808-6/271813385_1129584577581736_4627392267121470717_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF_kxB0l2Ui9YHf8N0KLRss2cyF5DpV5PfZzIXkOlXk9_JDij4izoBaSNNFZQisnOlv7BR5qLcqON_-7PBnxoU7&_nc_ohc=hZLqIjClQbwQ7kNvgEm_m0G&_nc_zt=23&_nc_ht=scontent.fjau2-1.fna&_nc_gid=AMD9UiMLVqsffG2HhHHkM-v&oh=00_AYD3rOZB7nHqEdYG8-ZYdhtQdOu20DNUkjEGZplNSKY96w&oe=67283618',
-      alt: 'Colorful Image',
-      loading: 'eager',
-    }}
+      src: ArxaTEC,
+      alt: 'Imagen ArxaTEC',
+      loading: 'lazy',
+      
+  }}
+  
   >
   <Fragment slot="content">
     <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sobre Nosotros</h2>
@@ -116,48 +97,8 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
 
-  <Steps
-  id="resume"
-  title="Experiencia Laboral"
-  items={[
-    {
-      title:
-        'Consultor de Derecho Laboral <br /> <span class="font-normal">Arxatec, Huancayo, Perú</span> <br /> <span class="text-sm font-normal">2022 - Presente</span>',
-      description: `Asesorar a empresas en el cumplimiento de las normativas laborales peruanas. <br /> Desarrollar políticas internas de recursos humanos para promover un entorno laboral saludable. <br /> Capacitar al personal sobre derechos laborales y mejores prácticas en el trabajo. <br /> Colaborar con equipos legales para resolver conflictos laborales de manera efectiva.`,
-      icon: 'tabler:briefcase',
-    },
-    {
-      title:
-        'Asistente Legal en Derecho Laboral <br /> <span class="font-normal">Consultores Laborales Huancayo, Perú</span> <br /> <span class="text-sm font-normal">2020 - 2022</span>',
-      description: `Apoyar en la elaboración de informes legales relacionados con el ámbito laboral. <br /> Investigar y analizar cambios en la legislación laboral peruana. <br /> Asistir en la preparación de documentos para disputas laborales. <br /> Coordinar sesiones de capacitación sobre derechos laborales para empleados y empleadores.`,
-      icon: 'tabler:briefcase',
-    },
-  ]}
-  classes={{ container: 'max-w-3xl' }}
-/>
-
-
-  <!-- Steps Widget ****************** -->
-<!-- 
-  <Steps
-    id="resume"
-    title="Education"
-    items={[
-      {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
-        icon: 'tabler:school',
-      },
-      {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
-        icon: 'tabler:school',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  /> -->
-
-  <!-- Features3 Widget ************** -->
+  <!-- HABILIDADES ****************** -->
 
   <Features3
   title="Habilidades"
@@ -203,6 +144,45 @@ const metadata = {
     },
   ]}
 />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+  id="resume"
+  title="Experiencia Laboral"
+  items={[
+    {
+      title:
+        'Consultor de Derecho Laboral <br /> <span class="font-normal">Arxatec, Huancayo, Perú</span> <br /> <span class="text-sm font-normal">2024 - Presente</span>',
+      description: `Asesorar a empresas en el cumplimiento de las normativas laborales peruanas. <br /> Desarrollar políticas internas de recursos humanos para promover un entorno laboral saludable. <br /> Capacitar al personal sobre derechos laborales y mejores prácticas en el trabajo. <br /> Colaborar con equipos legales para resolver conflictos laborales de manera efectiva.`,
+      icon: 'tabler:briefcase',
+    },
+   
+  ]}
+  classes={{ container: 'max-w-3xl' }}
+/>
+
+
+  <!-- Steps Widget ****************** -->
+<!-- 
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  /> -->
+
+  <!-- Features3 Widget ************** -->
+
 
   <!-- Content Widget **************** -->
 
