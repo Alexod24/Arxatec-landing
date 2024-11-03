@@ -15,6 +15,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 
+
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import WhatsApp from '~/components/widgets/WhatsApp.astro';
 
@@ -30,9 +31,10 @@ const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
 
 import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
+import Card from '~/components/widgets/Card.astro';
 
 const metadata = {
-  title: 'ArxaTec - Consultas Laborales',
+  title: 'ArxaTEC - Consultas Laborales',
   ignoreTitleTemplate: true,
 };
 ---
@@ -56,7 +58,7 @@ const metadata = {
 
   >
   <Fragment slot="title">
-    Arxatec: tu aliado <span style="color: #3A35A0;" class="highlight">
+    ArxaTEC: tu aliado <span style="color: #3A35A0;" class="highlight">
 
       en Derecho Laboral</span><br />
 </Fragment>
@@ -64,7 +66,7 @@ const metadata = {
 <Fragment slot="subtitle">
   <span class="hidden sm:inline">
     
-    Optimiza tu experiencia legal con <span class="font-semibold">Arxatec</span>. Accede a asesoría laboral especializada y tecnología avanzada para resolver tus casos de manera rápida y eficiente.
+    Optimiza tu experiencia legal con <span class="font-semibold">ArxaTEC</span>. Accede a asesoría laboral especializada y tecnología avanzada para resolver tus casos de manera rápida y eficiente.
   </span>
 </Fragment>
 
@@ -79,7 +81,7 @@ const metadata = {
 
   <Features2
   title="Sobre Nosotros"
-  subtitle="En Arxatec ayudamos a las personas a conocer y defender sus derechos laborales, brindando asesoría rápida y confiable en cada paso del camino."
+  subtitle="En ArxaTEC ayudamos a las personas a conocer y defender sus derechos laborales, brindando asesoría rápida y confiable en cada paso del camino."
 
   callToAction={{
     target: '_blank',
@@ -97,7 +99,7 @@ const metadata = {
 
 
 <Stats
-  title="Conoce el impacto de Arxatec"
+  title="Conoce el impacto de ArxaTEC"
   subtitle="Los números a continuación reflejan la confianza que nuestros usuarios depositan en nosotros y los resultados que hemos logrado juntos en la defensa de sus derechos laborales."
   stats={[
     { title: "Consultas procesadas", amount: '1.2K' },
@@ -113,8 +115,8 @@ const metadata = {
   <!-- Features Widget *************** -->
   <Features
   id="features"
-  title="¿Por qué elegir Arxatec?"
-  subtitle="Cada una de las siguientes características mejora la propuesta de valor de Arxatec."
+  title="¿Por qué elegir ArxaTEC?"
+  subtitle="Cada una de las siguientes características mejora la propuesta de valor de ArxaTEC."
   columns={2}
   items={[
     {
@@ -125,7 +127,7 @@ const metadata = {
     },
     {
       title: "Diseño adaptable para trabajadores",
-      description: "Arxatec se adapta perfectamente a las necesidades legales de los trabajadores, ofreciendo un diseño versátil que facilita la resolución de cualquier situación laboral.",
+      description: "ArxaTEC se adapta perfectamente a las necesidades legales de los trabajadores, ofreciendo un diseño versátil que facilita la resolución de cualquier situación laboral.",
       icon: "tabler:artboard"
     },
 
@@ -142,7 +144,7 @@ const metadata = {
     },
     {
       title: 'Respuestas legales rápidas con tecnología avanzada',
-      description: `Arxatec asegura tiempos de respuesta rápidos y una experiencia fluida, optimizando la consulta legal para una asesoría eficiente y profesional.`,
+      description: `ArxaTEC asegura tiempos de respuesta rápidos y una experiencia fluida, optimizando la consulta legal para una asesoría eficiente y profesional.`,
       icon: 'tabler:rocket',
     },
     {
@@ -243,13 +245,13 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-  title="Realiza tu consulta legal en línea de manera rápida y eficiente con Arxatec."
+  title="Realiza tu consulta legal en línea de manera rápida y eficiente con ArxaTEC."
   id='pasos'
   items={[
     {
       title: 'Paso 1: <span class="font-medium">Registro</span>',
       description:
-        "Crea tu cuenta en Arxatec. Proporciona tus datos personales y confirma tu correo electrónico para acceder a todas las funcionalidades de la plataforma. En pocos minutos estarás listo para realizar tus consultas legales.",
+        "Crea tu cuenta en ArxaTEC. Proporciona tus datos personales y confirma tu correo electrónico para acceder a todas las funcionalidades de la plataforma. En pocos minutos estarás listo para realizar tus consultas legales.",
       icon: 'tabler:user-plus',
     },
     {
@@ -272,7 +274,7 @@ const metadata = {
   ]}
   image={{
     src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-    alt: 'Realiza consultas en línea con Arxatec',
+    alt: 'Realiza consultas en línea con ArxaTEC',
   }}
 
   callToAction={{
@@ -286,14 +288,14 @@ const metadata = {
 
   <Features2
     title="Servicios legales laborales"
-    subtitle="Arxatec ofrece una variedad de servicios especializados en el área laboral"
+    subtitle="ArxaTEC ofrece una variedad de servicios especializados en el área laboral"
     tagline="Servicios"
     id='servicios'
     items={[
       {
         title: 'Asesoría en despidos',
       description:
-        'Los empleados pueden usar Arxatec para resolver disputas laborales con asesoría legal especializada.',
+        'Los empleados pueden usar ArxaTEC para resolver disputas laborales con asesoría legal especializada.',
         icon: 'flat-color-icons:template',
       },
       {
@@ -377,7 +379,7 @@ const metadata = {
     {
       title: 'Básico',
       subtitle: 'Asesoría avanzada y gestión de conflictos laborales',
-      price: 20,
+      price: 49.90,
       period: '/ mes',
       callToAction: {
         target: '_blank',
@@ -390,7 +392,7 @@ const metadata = {
     {
       title: 'Premium',
       subtitle: 'Soluciones personalizadas con mas funcionalidades',
-      price: 40,
+      price: 99.90,
       period: '/ mes',
       callToAction: {
         target: '_blank',
@@ -408,7 +410,7 @@ const metadata = {
 
   <FAQs
   title="Preguntas Frecuentes"
-  subtitle="Resuelve tus dudas sobre cómo Arxatec puede ayudarte a resolver tus problemas legales laborales de manera eficiente y accesible."
+  subtitle="Resuelve tus dudas sobre cómo ArxaTEC puede ayudarte a resolver tus problemas legales laborales de manera eficiente y accesible."
   tagline="FAQs"
   classes={{ container: 'max-w-6xl' }}
   id='faq'
@@ -419,7 +421,7 @@ const metadata = {
         'Ofrecemos una gama de servicios, que incluyen: Asesoría legal en línea para consultas laborales, tramitación de reclamos laborales, calculadoras legales para liquidaciones, horas extras y beneficios sociales, generación automática de documentos legales, capacitación en derechos laborales a través de cursos y webinars, servicio de primeros auxilios legales en emergencias laborales.',
     },
     {
-      title: '¿Cómo puedo registrar una consulta en Arxatec?',
+      title: '¿Cómo puedo registrar una consulta en ArxaTEC?',
       description:
         'Primero, debes crear una cuenta. Luego, desde tu panel de usuario, podrás ingresar los detalles de tu caso para que un abogado especializado en derecho laboral lo revise y te asesore.',
     },
@@ -499,7 +501,7 @@ const metadata = {
 
   <BlogLatestPosts
     title="Contenido en nuestros talleres gratuitos"
-    information={`Explora nuestro blog para obtener consejos prácticos sobre derecho laboral. Mejora tu conocimiento y resuelve conflictos laborales con herramientas clave. ¡Sigue aprendiendo con Arxatec!`}
+    information={`Explora nuestro blog para obtener consejos prácticos sobre derecho laboral. Mejora tu conocimiento y resuelve conflictos laborales con herramientas clave. ¡Sigue aprendiendo con ArxaTEC!`}
   />
 
   <!-- CallToAction Widget *********** -->
@@ -521,6 +523,8 @@ const metadata = {
   </div>
   
   </CallToAction>
+
+<Card></Card>
 
   
 </Layout>
