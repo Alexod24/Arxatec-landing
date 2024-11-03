@@ -1,6 +1,6 @@
 site:
   name: ArxaTEC
-  site: 'https://astrowind.vercel.app'
+  site: ''
   base: '/'
   trailingSlash: false
 
@@ -9,16 +9,16 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
+    default: ArxaTEC
+    template: '%s — ArxaTEC'
   description: "Arxatec ofrece asesoría laboral personalizada, garantizando que conozcas y protejas tus derechos en el trabajo. Desde la revisión de contratos hasta la resolución de conflictos, nuestro equipo de expertos está aquí para apoyarte."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: ArxaTEC
     images:
-      - url: '~/assets/images/default.png'
+      - url: '/assets/images/default.png'
         width: 1200
         height: 628
     type: website
