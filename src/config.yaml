@@ -11,14 +11,14 @@ metadata:
   title:
     default: AstroWind
     template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "Arxatec ofrece asesoría laboral personalizada, garantizando que conozcas y protejas tus derechos en el trabajo. Desde la revisión de contratos hasta la resolución de conflictos, nuestro equipo de expertos está aquí para apoyarte."
   robots:
     index: true
     follow: true
   openGraph:
     site_name: AstroWind
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/ARXATEC.png'
         width: 1200
         height: 628
     type: website
