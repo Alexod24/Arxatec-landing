@@ -164,7 +164,7 @@ export const headerData = {
       ]
     },
   ],
-  actions: [{ text: 'Iniciar Sesión', href: 'https://arxatec.net/auth/views/login.php', target: '_blank' }],
+  actions: [{ text: 'Iniciar Sesión', href: 'https://arxatec.net/auth/', target: '_blank' }],
 };
 
 export const footerData = {
